@@ -7,3 +7,12 @@ Aumentar o armazenamento de 30 PVC´s em um StatefulSet no Kubernetes. SEM DOWNT
 2º Use os seguintes parametros em seu arquivo statefulset2.yaml (arquivo esta no repositório)  
 
 3º Execute o arquivo .yaml com o parametro --force (kubectl apply -f statefulset.yaml --force)
+
+
+## DICA: Domine esses 3 conceitos para StatefulSets: 
+
+PersistentVolumeClaimRetentionPolicy
+
+UpdateStrategy com partition
+
+Rolling Updates ordenados
