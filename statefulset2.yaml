@@ -7,18 +7,18 @@ spec:
     whenScaled: Delete  # DELETA PVC QUANDO REPLICAS SÃO REDUZIDAS
   selector:
     matchLabels:
-      app: nginx # has to match .spec.template.metadata.labels
+      app: nginx 
   serviceName: "nginx"
-  replicas: 30  # by default is 1
+  replicas: 30  # ALTERAR NUMERO DE REPLICAAS
   updateStrategy:
     type: RollingUpdate
     rollingUpdate:
-      partition: 1 # atualiza apenas Pods com indice >=1 (preserva web-0)
+      partition: 1 # ATUALIZA APENAS PODS COM INDICE >=1 (preserva web-0)
   minReadySeconds: 0 # by default is 0
   template:
     metadata:
       labels:
-        app: nginx # has to match .spec.selector.matchLabels
+        app: nginx 
     spec:
       affinity:
         nodeAffinity:
@@ -53,6 +53,6 @@ spec:
       storageClassName: "standard-rwo"
       resources:
         requests:
-          storage: 8Gi #alterar o tamanho do volume
+          storage: 8Gi #ALTERAR O TAMANHO DO VOLUME
 
 
