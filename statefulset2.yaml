@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: nginx # has to match .spec.template.metadata.labels
   serviceName: "nginx"
-  replicas: 10  # by default is 1
+  replicas: 30  # by default is 1
   updateStrategy:
     type: RollingUpdate
     rollingUpdate:
