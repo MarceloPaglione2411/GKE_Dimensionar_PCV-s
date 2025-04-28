@@ -3,8 +3,8 @@ kind: StatefulSet
 metadata:
   name: web
 spec:
-   **persistentVolumeClaimRetentionPolicy: **
-    whenScaled: Delete
+   persistentVolumeClaimRetentionPolicy: # SE EXCLUIR OU REDUZIR UM STATEFULSET NÃO EXCLUIRÁ OS VOLUMES ASSOCIADOS A ELE
+    whenScaled: Delete  # DELETA PVC QUANDO REPLICAS SÃO REDUZIDAS
   selector:
     matchLabels:
       app: nginx # has to match .spec.template.metadata.labels
