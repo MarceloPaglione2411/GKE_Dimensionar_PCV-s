@@ -1,4 +1,4 @@
-# GKE_Dimensionar_PCV-s
+# GKE_Dimensionar_PVC´s
 Aumentar o armazenamento de 30 PVC´s em um StatefulSet no Kubernetes. SEM DOWNTIME!!
 
 ## SEGUE O PASSO A PASSO:
